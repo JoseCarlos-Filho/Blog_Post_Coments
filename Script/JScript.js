@@ -2,7 +2,7 @@
 const url = "https://jsonplaceholder.typicode.com/posts";
 
 const carregaElementos = document.querySelector("#load_Content");
-const postsContainer = document.querySelector("#Container");
+const postsContainer = document.querySelector("#container");
 
 // pega todos os posts com função assincrona
 async function pegaTodosPosts() {
