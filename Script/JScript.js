@@ -29,6 +29,7 @@ async function pegaTodosPosts() {
         const link = document.createElement("a");
 
         title.innerText = post.title;
+        console.log(title);
         body.innerText = post.body;
         link.innerText = "Ler";
         // id do post para posteriormente ser extraido.
@@ -41,6 +42,7 @@ async function pegaTodosPosts() {
 
         // montando o post no elemento div, carregando todos os posts da API
         postsContainer.appendChild(div);
+
     });
 }
 
