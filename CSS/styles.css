@@ -20,3 +20,7 @@ a, input[type="submit"] {
     border: none;
     cursor: pointer;
 }
+
+a:hover, input[type="submit"] {
+    opacity: 1;
+}
