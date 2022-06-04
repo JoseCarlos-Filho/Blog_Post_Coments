@@ -29,7 +29,7 @@ async function pegaTodosPosts() {
         const link = document.createElement("a");
 
         title.innerText = post.title;
-        console.log(title);
+        // console.log(title);
         body.innerText = post.body;
         link.innerText = "Ler";
         // id do post para posteriormente ser extraido.
