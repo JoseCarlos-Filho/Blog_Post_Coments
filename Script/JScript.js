@@ -6,19 +6,20 @@ const postsContainer = document.querySelector("#container");
 
 // pegar o id da URL
 // URLSearchParams(window.location.search) este objeto devolve um metodo que entrega os parametros da URL
-const procuraUrlParametros = new URLSearchParams(window.location.search);
+const procuraUrlParametros = new URLSearchParams(window.location.search)
 const postId = procuraUrlParametros.get("id");
+console.log(postId)
 
 // pega todos os posts com função assincrona
 async function pegaTodosPosts() {
 
     // Obtendo propriedades do JSON
     const resposta = await fetch(url);
-    console.log(resposta);
+    // console.log(resposta);
 
     // Obtendo dados do JSON
     const dados = await resposta.json();
-    console.log(dados);
+    // console.log(dados);
 
     // escondendo o carregaElementos utilizando o classList com a ação add com a classe esconder "hide"
     carregaElementos.classList.add("hide");
@@ -52,4 +53,8 @@ async function pegaTodosPosts() {
 }
 
 // Se postId for nulo
-
+if (!postId) {
+    pegaTodosPosts();
+} else {
+    console.log(postId);
+}
