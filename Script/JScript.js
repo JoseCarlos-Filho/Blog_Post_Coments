@@ -4,6 +4,11 @@ const url = "https://jsonplaceholder.typicode.com/posts";
 const carregaElementos = document.querySelector("#load_Content");
 const postsContainer = document.querySelector("#container");
 
+// pegar o id da URL
+// URLSearchParams(window.location.search) este objeto devolve um metodo que entrega os parametros da URL
+const procuraUrlParametros = new URLSearchParams(window.location.search);
+const postId = procuraUrlParametros.get("id");
+
 // pega todos os posts com função assincrona
 async function pegaTodosPosts() {
 
@@ -46,4 +51,5 @@ async function pegaTodosPosts() {
     });
 }
 
-pegaTodosPosts();
+// Se postId for nulo
+
