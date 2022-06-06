@@ -11,9 +11,9 @@ const postsContainer = document.querySelector("#container-posts");
 
 // pegar o id da URL
 // URLSearchParams(window.location.search) este objeto devolve um metodo que entrega os parametros da URL
-const procuraUrlParametros = new URLSearchParams(window.location.search);
-const postId = procuraUrlParametros.get("id");
-console.log(postId)
+let urlSearchParams = new URLSearchParams(window.location.search);
+const postId = urlSearchParams.get("id");
+// console.log(postId)
 
 // pega todos os posts com função assincrona
 async function pegaTodosPosts() {
@@ -73,6 +73,7 @@ async function pegaTodosPosts() {
 
 // }
 
+// pegaTodosPosts();
 // Se postId for nulo
 if (!postId) {
     pegaTodosPosts();
