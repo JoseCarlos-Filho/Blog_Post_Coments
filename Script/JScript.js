@@ -11,7 +11,7 @@ const postsContainer = document.querySelector("#container-posts");
 
 // pegar o id da URL
 // URLSearchParams(window.location.search) este objeto devolve um metodo que entrega os parametros da URL
-let urlSearchParams = new URLSearchParams(window.location.search);
+const urlSearchParams = new URLSearchParams(window.location.search);
 const postId = urlSearchParams.get("id");
 // console.log(postId)
 
