@@ -5,9 +5,9 @@ const carregaElementos = document.querySelector("#load-content");
 const postsContainer = document.querySelector("#container-posts");
 
 // elementos para serem preenchidos no post
-// const paginaPost = document.querySelector("#post");
-// const containerPost = document.querySelector("#container");
-// const comentarioContainer = document.querySelector("#containerComentario");
+const paginaPost = document.querySelector("#post");
+const containerPost = document.querySelector("#container");
+const comentarioContainer = document.querySelector("#containerComentario");
 
 // pegar o id da URL
 // URLSearchParams(window.location.search) este objeto devolve um metodo que entrega os parametros da URL
@@ -58,20 +58,20 @@ async function pegaTodosPosts() {
 }
 
 // função que faz o post individual
-// async function fazPost(id) {
+async function fazPost(id) {
 
-//     const [respostaPost, respostaComentario] = await Promise.all([
-//         fetch(`${url}/${id}`),
-//         fetch(`${url}/${id}/comments`)
-//     ])
+    const [respostaPost, respostaComentario] = await Promise.all([
+        fetch(`${url}/${id}`),
+        fetch(`${url}/${id}/comments`)
+    ])
 
-//     const dadosPost = await respostaPost.json();
-//     const dadosComentario = await respostaComentario.json();
+    const dadosPost = await respostaPost.json();
+    const dadosComentario = await respostaComentario.json();
 
-//     carregaElementos.classList.add("hide");
-//     paginaPost.classList.remove("hide");
+    carregaElementos.classList.add("hide");
+    paginaPost.classList.remove("hide");
 
-// }
+}
 
 // pegaTodosPosts();
 // Se postId for nulo
