@@ -60,13 +60,13 @@ async function pegaTodosPosts() {
 // função que faz o post individual
 async function fazPost(id) {
 
-    const [responsePost, responseComentario] = await Promise.all([
+    const [responsePost, responseComments] = await Promise.all([
         fetch(`${url}/${id}`),
-        fetch(`${url}/${id}/comments`)
-    ])
+        fetch(`${url}/${id}/comments`),
+    ]);
 
     const dadosPost = await responsePost.json();
-    const dadosComentario = await responseComentario.json();
+    const dadosComentario = await responseComments.json();
 
     carregaElementos.classList.add("hide");
     paginaPost.classList.remove("hide");
