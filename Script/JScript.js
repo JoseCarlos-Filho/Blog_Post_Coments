@@ -60,16 +60,25 @@ async function pegaTodosPosts() {
 // função que faz o post individual
 async function fazPost(id) {
 
-    const [respostaPost, respostaComentario] = await Promise.all([
+    const [responsePost, responseComentario] = await Promise.all([
         fetch(`${url}/${id}`),
         fetch(`${url}/${id}/comments`)
     ])
 
-    const dadosPost = await respostaPost.json();
-    const dadosComentario = await respostaComentario.json();
+    const dadosPost = await responsePost.json();
+    const dadosComentario = await responseComentario.json();
 
     carregaElementos.classList.add("hide");
     paginaPost.classList.remove("hide");
+
+    const title = document.createElement("h1");
+    const body = document.createElement("p");
+
+    title.innerText = dadosPost.title;
+    body.innerText = dadosPost.body;
+
+    postsContainer.appendChild(title);
+    postsContainer.appendChild(body);
 
 }
 
@@ -79,5 +88,5 @@ if (!postId) {
     pegaTodosPosts();
 } else {
     // fazPost(postId);
-    console.log(postId);
+    fazPost(postId);
 }
