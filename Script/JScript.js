@@ -6,8 +6,8 @@ const postsContainer = document.querySelector("#container-posts");
 
 // elementos para serem preenchidos no post
 const paginaPost = document.querySelector("#post");
-const containerPost = document.querySelector("#container");
-const comentarioContainer = document.querySelector("#containerComentario");
+const containerPost = document.querySelector("#container-post");
+const comentarioContainer = document.querySelector("#container-comentario");
 
 // pegar o id da URL
 // URLSearchParams(window.location.search) este objeto devolve um metodo que entrega os parametros da URL
@@ -58,7 +58,7 @@ async function pegaTodosPosts() {
 }
 
 // função que faz o post individual
-async function fazPost(id) {
+async function pegaPost(id) {
 
     const [responsePost, responseComments] = await Promise.all([
         fetch(`${url}/${id}`),
@@ -80,6 +80,10 @@ async function fazPost(id) {
     postsContainer.appendChild(title);
     postsContainer.appendChild(body);
 
+    dadosComentario.map((comment) => {
+        createComment(comment);
+    })
+
 }
 
 // pegaTodosPosts();
@@ -88,5 +92,5 @@ if (!postId) {
     pegaTodosPosts();
 } else {
     // fazPost(postId);
-    fazPost(postId);
+    pegaPost(postId);
 }
