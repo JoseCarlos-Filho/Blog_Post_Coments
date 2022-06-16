@@ -68,7 +68,7 @@ async function pegaPost(id) {
     const dadosPost = await responsePost.json();
     const dadosComentario = await responseComments.json();
 
-    carregaElementos.classList.add("hide");
+    // carregaElementos.classList.add("hide");
     paginaPost.classList.remove("hide");
 
     const title = document.createElement("h1");
