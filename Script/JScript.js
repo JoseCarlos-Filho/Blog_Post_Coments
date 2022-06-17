@@ -82,8 +82,22 @@ async function pegaPost(id) {
 
     dadosComentario.map((comment) => {
         createComment(comment);
-    })
+    });
 
+}
+
+function createComment(comment) {
+    const div = document.createElement("div");
+    const email = document.createElement("h3");
+    const commentBody = document.createElement("p");
+
+    email.innerText = comment.email;
+    commentBody.innerText = comment.body;
+
+    div.appendChild(email);
+    div.appendChild(commentBody);
+
+    commentsContainer.appendChild(div);
 }
 
 // pegaTodosPosts();
