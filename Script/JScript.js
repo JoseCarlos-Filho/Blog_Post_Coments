@@ -104,6 +104,21 @@ function createComment(comment) {
     commentsContainer.appendChild(div);
 }
 
+// comentario do post
+async function postComment(comment) {
+    
+    const response = await fetch(`${url}/${postId}/comments`, {
+        method: "POST",
+        body: comment,
+        headers: {
+            "Content-Type": "application/json"
+        },
+    });
+
+    const data = await response.json();
+    console.log(data);
+}
+
 // pegaTodosPosts();
 // Se postId for nulo
 if (!postId) {
