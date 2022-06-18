@@ -9,6 +9,10 @@ const paginaPost = document.querySelector("#post");
 const containerPost = document.querySelector("#container-post");
 const comentarioContainer = document.querySelector("#container-comentario");
 
+const commentForm = document.querySelector("#formComentario");
+const emailInput = document.querySelector("#email");
+const bodyInput = document.querySelector("#body");
+
 // pegar o id da URL
 // URLSearchParams(window.location.search) este objeto devolve um metodo que entrega os parametros da URL
 const urlSearchParams = new URLSearchParams(window.location.search);
@@ -68,7 +72,7 @@ async function pegaPost(id) {
     const dadosPost = await responsePost.json();
     const dadosComentario = await responseComments.json();
 
-    //  carregaElementos.classList.add("hide");
+     carregaElementos.classList.add("hide");
     paginaPost.classList.remove("hide");
 
     const title = document.createElement("h1");
@@ -107,4 +111,6 @@ if (!postId) {
 } else {
     // fazPost(postId);
     pegaPost(postId);
+
+    //adicionando evento
 }
