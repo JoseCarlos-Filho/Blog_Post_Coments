@@ -113,4 +113,17 @@ if (!postId) {
     pegaPost(postId);
 
     //adicionando evento
+    commentForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        let comment = {
+            email: emailInput.value,
+            body: bodyInput.value,
+        };
+
+        // console.log(comment);
+        comment = JSON.stringify(comment);
+
+        postComment(comment);
+    });
 }
