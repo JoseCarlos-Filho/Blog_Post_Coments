@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: linear-gradient(to right, rgb(200, 214, 239), rgb(42, 110, 139));
 }
 
 .hide {

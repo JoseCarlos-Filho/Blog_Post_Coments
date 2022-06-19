@@ -116,7 +116,8 @@ async function postComment(comment) {
     });
 
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
+    createComment(data);
 }
 
 // pegaTodosPosts();
