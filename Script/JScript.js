@@ -81,8 +81,8 @@ async function pegaPost(id) {
     title.innerText = dadosPost.title;
     body.innerText = dadosPost.body;
 
-    postsContainer.appendChild(title);
-    postsContainer.appendChild(body);
+    containerPost.appendChild(title);
+    containerPost.appendChild(body);
 
     dadosComentario.map((comment) => {
         createComment(comment);
