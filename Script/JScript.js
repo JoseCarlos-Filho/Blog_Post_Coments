@@ -101,7 +101,7 @@ function createComment(comment) {
     div.appendChild(email);
     div.appendChild(commentBody);
 
-    commentsContainer.appendChild(div);
+    comentarioContainer.appendChild(div);
 }
 
 // comentario do post
