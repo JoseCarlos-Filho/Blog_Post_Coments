@@ -79,7 +79,7 @@ async function pegaPost(id) {
     const body = document.createElement("p");
     // CSS do elemento criado title na page Post
     title.style.width = "80%";
-
+    
     title.innerText = dadosPost.title;
     body.innerText = dadosPost.body;
 
