@@ -1,6 +1,6 @@
-# Projeto Room Application
+# Projeto Blog Post Comments
 
-![Projeto Room Aplications](./src/assets/desktop-design-slide-1.jpg)
+![Projeto Blog Post Comments](/assets/Desktop-page.png)
 
 ## Conteúdo
 
@@ -10,7 +10,6 @@
 - [O que aprendeu](#O-que-aprendeu)
 - [Construido com](#Construido-com)
 - [Autor](#Autor)
-- [Como utilizar](#Como-utilizar)
 
 ## Deploy
 
@@ -18,53 +17,22 @@
 
 ## Resumo
 
-Aplicação de apresentação comercial de arquitetura Home.
+Aplicação que consome API de Blog utilizando Fetch API de forma dinâmica.
 
 ## Descrição
 
-Aplicação desenvolvida para apresentação de arquitetura de casas, utilizando a seguintes Techs:
-FrameWork Vue.JS, JavaScript, SCSS, Vue Routers, HTML5 e CSS3
+Aplicação utilizando Fetch API desenvolvido em HTML5, CSS3 e JavaScript
 
 ## O que aprendeu
 
-Utilização de componentes em Vue.JS, utilização do Vue Routers, utilização do SCSS/SASS.
+Inserir conteudo em um bloco de forma dinamica utilizando Fetch API. API de consumo teve base em um blog
 
 ## Construido com
 
 HTML5
 CSS3
-Framework Vue.JS
-Routers
 JavaScript
-SCSS/SASS
 
 ## Autor
 
 - Copyright (c): [José Carlos Rodrigues Filho](https://github.com/JoseCarlos-Filho/Lista-Atividades)
-
-## Como utilizar
-
-# room
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
