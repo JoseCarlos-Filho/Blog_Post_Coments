@@ -13,7 +13,7 @@
 
 ## Deploy
 
-- deploy: [Aplicativo Room Home Page](https://jose-carlos-filho-roomsite.netlify.app/#/)
+- deploy: [Aplicativo Blog Post Comments]()
 
 ## Resumo
 
@@ -35,4 +35,4 @@ JavaScript
 
 ## Autor
 
-- Copyright (c): [José Carlos Rodrigues Filho](https://github.com/JoseCarlos-Filho/Lista-Atividades)
+- Copyright (c): [José Carlos Rodrigues Filho](https://github.com/JoseCarlos-Filho/Blog_Post_Coments)
