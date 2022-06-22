@@ -13,7 +13,7 @@
 
 ## Deploy
 
-- deploy: [Aplicativo Blog Post Comments]()
+- deploy: [Aplicativo Blog Post Comments](https://jose-carlos-blog-posts-information.netlify.app/)
 
 ## Resumo
 
